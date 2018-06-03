@@ -156,35 +156,78 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-关于hexo博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/2018/06/02/hello-world/">Hello World</a>
+      <a class="article-title" href="/blog/2018/06/03/关于hexo博客/">关于hexo博客</a>
     </h1>
   
 
         
-        <a href="/blog/2018/06/02/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-02T03:14:55.095Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-02</time>
+        <a href="/blog/2018/06/03/关于hexo博客/" class="archive-article-date">
+  	<time datetime="2018-06-03T14:53:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-03</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>前两天刚搭建好博客，今天没事刚好记录下关于hexo博客的相关内容，希望能帮到大家少走点弯路。</p>
+<blockquote>
+<ul>
+<li>关于hexo</li>
+<li>关于GitHub page</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ul>
+</blockquote>
+<p>###1、安装hexo<br>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用    Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：</p>
+<blockquote>
+<ul>
+<li><a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
+<li><a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a></li>
+</ul>
+</blockquote>
+<p>当然安装这两个软件也很简单，在这里不做过多介绍。</p>
+<p>安装好以上的软件后，我们可以通过cmd命令验证是否正确。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br></pre></td></tr></table></figure>
+<p>接下来我们通过Node.js的npm命令安装hexo即可。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+<p>安装 Hexo 完成后，我们首先需要为我们的项目创建一个指定文件夹（例如我在 E 盘目录下创建了一个文件夹 blog 。E:\blog ），在指定文件夹中执行下列命令， Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//使用node.js Command命令窗口，切换至指定文件目录</span><br><span class="line"> hexo init</span><br></pre></td></tr></table></figure>
+<p>等待安装，安装完成后，指定文件夹 的目录如下：<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── _config.yml</span><br><span class="line">├── package.json</span><br><span class="line">├── scaffolds</span><br><span class="line">├── source</span><br><span class="line">|   ├── _drafts</span><br><span class="line">|   └── _posts</span><br><span class="line">└── ...</span><br></pre></td></tr></table></figure></p>
+<p>继续执行命令。<br><figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo s --debug</span><br></pre></td></tr></table></figure></p>
+<p>这个时候，我们在浏览器中访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，就可以看到基于 Hexo 的默认主题的原型：<br><img src="https://upload-images.jianshu.io/upload_images/2907906-5bc10de2c4c70ca0.png" alt=""></p>
+<p><strong>安装主题</strong></p>
+<p>我所使用的<a href="https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=1&amp;tn=baidu&amp;wd=yilia%20%E4%B8%BB%E9%A2%98&amp;oq=yilia&amp;rsv_pq=8aa847df0002e09b&amp;rsv_t=7eef1BgWJhIzUhSdAmmcv2mWKRoq3PkIIQ6CaTZHPUsTjRLWoCH2L%2FNPLTA&amp;rqlang=cn&amp;rsv_enter=1&amp;inputT=1204&amp;rsv_sug3=37&amp;rsv_sug2=0&amp;rsv_sug4=2093&amp;rsv_sug=2" target="_blank" rel="noopener">yilia</a>主题，当然大家可以在hexo官网上找到更多的主题，安装照样使用的是npm命令。</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+<p>等待下载完成即可。</p>
+<blockquote>
+<p>在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml 。其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录（themes）下，这份配置由主题作者提供，主要用于配置主题相关的选项。<br>一般将前者称为<em>站点配置文件</em>，后者称为<em>主题配置文件</em></p>
+</blockquote>
+<p><strong>启用 yilia 主题</strong><br>打开<em>站点配置文件</em>，找到 theme 字段，并将其值更改为 yilia 。<br>到此， yilia 主题安装完成。下一步我们将验证主题是否正确启用。在切换主题之后、验证之前，我们最好使用 hexo clean 来清除 Hexo 的缓存。</p>
+<p><strong>验证主题</strong><br>首先启动 Hexo 本地站点，并开启调试模式（即加上 –debug），整个命令是 hexo s –debug。在服务启动的过程，注意观察命令行输出是否有任何异常信息。当命令行输出中提示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure></p>
+<p>此时即可使用浏览器访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> ，检查站点是否正确运行。</p>
+<p>至此hexo和主题的安装已经告一段落。<br><strong>本地调试步骤</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s --debug</span><br></pre></td></tr></table></figure></p>
+<p>首先hexo clean会将hexo缓存清除，避免因为缓存出现其他问题，你懂的。<br>然后hexo g帮我们重新生成静态的html文件。<br>最后hexo s将开启本地服务，将你的网页在本地服务器上访问。</p>
+<p>最后提醒大家，<strong>开启服务后，使用ctrl+c即可关闭服务</strong>，尴尬的是这事确实困扰了我一段时间，间接说明多读点书总是有好处的。</p>
+<p>###2、Github Page<br>简单介绍下github:</p>
+<blockquote>
+<p><strong>·</strong> 用户编写的，托管在GitHub上的静态网页<br><strong>·</strong> 简单方便，相当于一个免费的服务器<br><strong>·</strong> 绑定域名，辨识度高`。</p>
+</blockquote>
+<hr>
+<p>也就是说我们可以通过Github Page建立一个自己的静态的个人博客，完全自定义样式，这也是为什么使用它的原因。</p>
+<p>当然首先你得有一个Github账号…</p>
+<p><strong>建立新的存储库</strong><br><img src="http://wx1.sinaimg.cn/mw690/0060lm7Tly1frygj73agyj30tw0m9407.jpg" alt=""></p>
+<p>我们的个人博客将存储在这个存储库中。</p>
+<p><strong>配置Hexo与github pages关联</strong></p>
+<p>安装hexo-deployer-git，这是hexo关于git的管理组件。<br>进入Hexo也就是之前hexo init初始化过的文件夹目录下，在终端输入如下命令：</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>安装完成后，你的blog文件夹会生成一个.deploy_git的文件夹，如图所示：<br><img src="http://wx2.sinaimg.cn/mw690/0060lm7Tly1frygyb6fudj30zy0newgm.jpg.jpg" alt=""></p>
+<p>接下来开始配置hexo站点文件，修改如下配置信息：<br><img src="http://wx4.sinaimg.cn/mw690/0060lm7Tly1fryh0mpu1rj30ct033glh.jpg" alt=""></p>
 
       
 
@@ -198,11 +241,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Test</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
         		</li>
       		
 		</ul>
@@ -212,7 +251,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/blog/2018/06/02/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/blog/2018/06/03/关于hexo博客/">展开全文 >></a>
         </p>
       
 
@@ -262,7 +301,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Hello</p>
+        <p>博客终于搭建起来了。</p>
+<p>折腾了两天多，在GitHub page上看到自己的博客加载起来，突然有种错综复杂的恍惚感。他不像是qq空间、贴吧、朋友圈，更像是属于自己的一片小小的领地，因而我满足于这种归属感，我愿在上面记录、警醒自己。</p>
+<p>“一个农民，通过自身努力终于分到了一块地，不再需要在地主的土地上创造流量价值时，于是翻身作主的他可以宣告说：Hello World。当然这个农民确切来说是个码农。”</p>
 
       
 
@@ -275,10 +316,6 @@
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Test</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
         		</li>
@@ -413,11 +450,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Test</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>

@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://dzhaohui.github.io/blog">
-  <title>Tag: hexo | 邓朝晖</title>
+  <title>MySql引擎 | 邓朝晖</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="个人博客">
-<meta name="keywords" content="个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="邓朝晖">
-<meta property="og:url" content="https://dzhaohui.github.io/blog/tags/hexo/index.html">
+  <meta name="description" content="InnoDB存储引擎InnoDB是事务型数据库的首选引擎，支持事务安全表（ACID），支持行锁定和外键，上图也看到了，InnoDB是默认的MySQL引擎。InnoDB主要特性有：  1、InnoDB给MySQL提供了具有提交、回滚和崩溃恢复能力的事物安全（ACID兼容）存储引擎。InnoDB锁定在行级并且也在SELECT语句中提供一个类似Oracle的非锁定读。这些功能增加了多用户部署和性能。在S">
+<meta name="keywords" content="MySql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySql引擎">
+<meta property="og:url" content="https://dzhaohui.github.io/blog/2018/06/11/MySql引擎/index.html">
 <meta property="og:site_name" content="邓朝晖">
-<meta property="og:description" content="个人博客">
+<meta property="og:description" content="InnoDB存储引擎InnoDB是事务型数据库的首选引擎，支持事务安全表（ACID），支持行锁定和外键，上图也看到了，InnoDB是默认的MySQL引擎。InnoDB主要特性有：  1、InnoDB给MySQL提供了具有提交、回滚和崩溃恢复能力的事物安全（ACID兼容）存储引擎。InnoDB锁定在行级并且也在SELECT语句中提供一个类似Oracle的非锁定读。这些功能增加了多用户部署和性能。在S">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-06-11T12:55:03.438Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="邓朝晖">
-<meta name="twitter:description" content="个人博客">
+<meta name="twitter:title" content="MySql引擎">
+<meta name="twitter:description" content="InnoDB存储引擎InnoDB是事务型数据库的首选引擎，支持事务安全表（ACID），支持行锁定和外键，上图也看到了，InnoDB是默认的MySQL引擎。InnoDB主要特性有：  1、InnoDB给MySQL提供了具有提交、回滚和崩溃恢复能力的事物安全（ACID兼容）存储引擎。InnoDB锁定在行级并且也在SELECT语句中提供一个类似Oracle的非锁定读。这些功能增加了多用户部署和性能。在S">
   
     <link rel="alternative" href="/atom.xml" title="邓朝晖" type="application/atom+xml">
   
@@ -154,60 +155,266 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-MySql引擎" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/blog/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/blog/2018/06/03/关于hexo博客/" class="archive-article-date">
-  	<time datetime="2018-06-03T14:53:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-03</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/blog/2018/06/03/关于hexo博客/">关于hexo博客</a>
+    <h1 class="article-title" itemprop="name">
+      MySql引擎
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/blog/2018/06/11/MySql引擎/" class="archive-article-date">
+  	<time datetime="2018-06-11T11:56:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="InnoDB存储引擎"><a href="#InnoDB存储引擎" class="headerlink" title="InnoDB存储引擎"></a>InnoDB存储引擎</h3><p>InnoDB是事务型数据库的首选引擎，支持事务安全表（ACID），支持行锁定和外键，上图也看到了，InnoDB是默认的MySQL引擎。InnoDB主要特性有：</p>
+<blockquote>
+<p>1、InnoDB给MySQL提供了具有提交、回滚和崩溃恢复能力的事物安全（ACID兼容）存储引擎。InnoDB锁定在行级并且也在SELECT语句中提供一个类似Oracle的非锁定读。这些功能增加了多用户部署和性能。在SQL查询中，可以自由地将InnoDB类型的表和其他MySQL的表类型混合起来，甚至在同一个查询中也可以混合<br>2、InnoDB是为处理巨大数据量的最大性能设计。它的CPU效率可能是任何其他基于磁盘的关系型数据库引擎锁不能匹敌的<br>3、InnoDB存储引擎完全与MySQL服务器整合，InnoDB存储引擎为在主内存中缓存数据和索引而维持它自己的缓冲池。InnoDB将它的表和索引在一个逻辑表空间中，表空间可以包含数个文件（或原始磁盘文件）。这与MyISAM表不同，比如在MyISAM表中每个表被存放在分离的文件中。InnoDB表可以是任何尺寸，即使在文件尺寸被限制为2GB的操作系统上<br>4、InnoDB支持外键完整性约束，存储表中的数据时，每张表的存储都按主键顺序存放，如果没有显示在表定义时指定主键，InnoDB会为每一行生成一个6字节的ROWID，并以此作为主键<br>5、InnoDB被用在众多需要高性能的大型数据库站点上</p>
+</blockquote>
+<a id="more"></a>
+<p>InnoDB不创建目录，使用InnoDB时，MySQL将在MySQL数据目录下创建一个名为ibdata1的10MB大小的自动扩展数据文件，以及两个名为ib_logfile0和ib_logfile1的5MB大小的日志文件</p>
+<h3 id="MyISAM存储引擎"><a href="#MyISAM存储引擎" class="headerlink" title="MyISAM存储引擎"></a>MyISAM存储引擎</h3><p>MyISAM基于ISAM存储引擎，并对其进行扩展。它是在Web、数据仓储和其他应用环境下最常使用的存储引擎之一。MyISAM拥有较高的插入、查询速度，但不支持事物。MyISAM主要特性有：</p>
+<blockquote>
+<p>1、大文件（达到63位文件长度）在支持大文件的文件系统和操作系统上被支持<br>2、当把删除和更新及插入操作混合使用的时候，动态尺寸的行产生更少碎片。这要通过合并相邻被删除的块，以及若下一个块被删除，就扩展到下一块自动完成<br>3、每个MyISAM表最大索引数是64，这可以通过重新编译来改变。每个索引最大的列数是16<br>4、最大的键长度是1000字节，这也可以通过编译来改变，对于键长度超过250字节的情况，一个超过1024字节的键将被用上<br>5、BLOB和TEXT列可以被索引<br>6、NULL被允许在索引的列中，这个值占每个键的0~1个字节<br>7、所有数字键值以高字节优先被存储以允许一个更高的索引压缩<br>8、每个MyISAM类型的表都有一个AUTO_INCREMENT的内部列，当INSERT和UPDATE操作的时候该列被更新，同时AUTO_INCREMENT列将被刷新。所以说，MyISAM类型表的AUTO_INCREMENT列更新比InnoDB类型的AUTO_INCREMENT更快<br>9、可以把数据文件和索引文件放在不同目录<br>10、每个字符列可以有不同的字符集<br>11、有VARCHAR的表可以固定或动态记录长度<br>12、VARCHAR和CHAR列可以多达64KB </p>
+</blockquote>
+<p>使用MyISAM引擎创建数据库，将产生3个文件。文件的名字以表名字开始，扩展名之处文件类型：frm文件存储表定义、数据文件的扩展名为.MYD（MYData）、索引文件的扩展名时.MYI（MYIndex）</p>
+<h3 id="MEMORY存储引擎"><a href="#MEMORY存储引擎" class="headerlink" title="MEMORY存储引擎"></a>MEMORY存储引擎</h3><p>MEMORY存储引擎将表中的数据存储到内存中，未查询和引用其他表数据提供快速访问。MEMORY主要特性有：</p>
+<blockquote>
+<p>1、MEMORY表的每个表可以有多达32个索引，每个索引16列，以及500字节的最大键长度<br>2、MEMORY存储引擎执行HASH和BTREE缩影<br>3、可以在一个MEMORY表中有非唯一键值<br>4、MEMORY表使用一个固定的记录长度格式<br>5、MEMORY不支持BLOB或TEXT列<br>6、MEMORY支持AUTO_INCREMENT列和对可包含NULL值的列的索引<br>7、MEMORY表在所由客户端之间共享（就像其他任何非TEMPORARY表）<br>8、MEMORY表内存被存储在内存中，内存是MEMORY表和服务器在查询处理时的空闲中，创建的内部表共享<br>9、当不再需要MEMORY表的内容时，要释放被MEMORY表使用的内存，应该执行DELETE FROM或TRUNCATE TABLE，或者删除整个表（使用DROP TABLE）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">功  能</th>
+<th style="text-align:center">MYISAM</th>
+<th style="text-align:center">Memory</th>
+<th style="text-align:center">InnoDB</th>
+<th style="text-align:center">Archive</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">存储限制</td>
+<td style="text-align:center">256TB</td>
+<td style="text-align:center">RAM</td>
+<td style="text-align:center">64TB</td>
+<td style="text-align:center">None</td>
+</tr>
+<tr>
+<td style="text-align:center">支持事物</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">支持全文索引</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">支持数索引</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">支持哈希索引</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">支持数据缓存</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">N/A</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">No</td>
+</tr>
+<tr>
+<td style="text-align:center">支持外键</td>
+<td style="text-align:center">No</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">Yes</td>
+<td style="text-align:center">No</td>
+</tr>
+</tbody>
+</table>
+<p>——以上转载至<a href="https://blog.csdn.net/gaohuanjie/article/details/50944782" target="_blank" rel="noopener">https://blog.csdn.net/gaohuanjie/article/details/50944782</a></p>
+<h3 id="3、选择："><a href="#3、选择：" class="headerlink" title="3、选择："></a>3、选择：</h3><p>因为MyISAM相对简单所以在效率上要优于InnoDB。如果系统读多，写少。对原子性要求低。那么MyISAM最好的选择。且MyISAM恢复速度快。可直接用备份覆盖恢复。<br>如果系统读少，写多的时候，尤其是并发写入高的时候。InnoDB就是首选了。<br>两种类型都有自己优缺点，选择那个完全要看自己的实际需求。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://wx2.sinaimg.cn/mw690/0060lm7Tly1frwvq64xnjj309j09ht99.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySql</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://dzhaohui.github.io/blog/2018/06/11/MySql引擎/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/blog/2018/06/03/关于hexo博客/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于hexo博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "Mon Jun 11 2018 19:56:35 GMT+0800",
+  owner: 'DZhaoHui',
+  repo: 'blog',
+  oauth: {
+    client_id: '05d179ef20452a8cdf74',
+    client_secret: '2aeaf11dd69595437077311fd89a79c9aa4faae8',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -230,9 +437,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
